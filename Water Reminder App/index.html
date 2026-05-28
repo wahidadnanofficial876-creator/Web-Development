@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Water Drinking Reminder</title>
+
+  <link rel="stylesheet" href="style.css"/>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  
+  <div id="onboarding" class="screen active">
+    <div class="glass-card">
+      <h1>💧 Water Reminder</h1>
+
+      <input type="number" id="age" placeholder="Enter Age"/>
+      <input type="number" id="weight" placeholder="Enter Weight (kg)"/>
+
+      <button id="startBtn">Start Tracking</button>
+    </div>
+  </div>
+
+  
+  <div id="app" class="screen">
+
+    
+    <div class="navbar">
+      <h2>Hydration Tracker</h2>
+
+      <button id="themeToggle">🌙</button>
+    </div>
+
+    
+    <div class="dashboard">
+
+      <div class="progress-container">
+
+        <div class="progress-ring" id="progressRing">
+          <svg width="260" height="260">
+
+            <circle
+              cx="130"
+              cy="130"
+              r="110"
+              stroke="rgba(255,255,255,0.2)"
+              stroke-width="16"
+              fill="none"
+            />
+
+            <circle
+              id="progressCircle"
+              cx="130"
+              cy="130"
+              r="110"
+              stroke="#38bdf8"
+              stroke-width="16"
+              fill="none"
+              stroke-linecap="round"
+              stroke-dasharray="691"
+              stroke-dashoffset="691"
+            />
+
+          </svg>
+
+          <div class="progress-text">
+            <h1 id="waterAmount">0L</h1>
+            <p id="goalText">/ 0L</p>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="tap-text">Tap Circle To Drink +200ml</p>
+
+      <div class="motivation" id="motivation">
+        Stay hydrated 💙
+      </div>
+
+      <div class="buttons">
+        <button id="resetBtn">Reset</button>
+        <button id="historyBtn">History</button>
+        <button id="settingsBtn">Settings</button>
+      </div>
+
+    </div>
+
+
+    <div class="modal" id="historyModal">
+      <div class="modal-content">
+
+        <h2>7 Day History</h2>
+
+        <div id="historyList"></div>
+
+        <canvas id="historyChart"></canvas>
+
+        <button onclick="closeHistory()">Close</button>
+
+      </div>
+    </div>
+
+    
+    <div class="modal" id="settingsModal">
+      <div class="modal-content">
+
+        <h2>Reminder Frequency</h2>
+
+        <select id="frequencySelect">
+          <option value="1">Every 1 Hour</option>
+          <option value="2" selected>Every 2 Hours</option>
+          <option value="3">Every 3 Hours</option>
+          <option value="4">Every 4 Hours</option>
+        </select>
+<button id="restartBtn">Restart Setup</button>
+        <button id="saveSettings">Save</button>
+
+        <button onclick="closeSettings()">Close</button>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
