@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smoothies Soda — Sip the rainbow in every fizz</title>
+  <meta name="description" content="Real-fruit sparkling soda made with love. Pastel cans, bold flavors, zero junk." />
+  <meta name="theme-color" content="#FF6B9D" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Floating bubbles backdrop -->
+  <div class="bubbles-bg" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="navbar glass">
+    <a href="#" class="logo" aria-label="Smoothies Soda">
+      <span class="logo-icon">
+        <span class="logo-wave"></span>
+      </span>
+      <span class="logo-text">Smoothies <em>Soda</em></span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <div class="nav-item">
+        <button class="nav-btn">Products ▾</button>
+        <div class="dropdown">
+          <a href="#products">All Sodas</a>
+          <a href="#products">Fruit Flavors</a>
+          <a href="#products">Zero Sugar</a>
+          <a href="#products">Limited Edition</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <button class="nav-btn">Categories ▾</button>
+        <div class="dropdown">
+          <a href="#products">New Arrivals</a>
+          <a href="#products">Best Sellers</a>
+          <a href="#products">Bundles</a>
+          <a href="#products">Gifts</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <button class="nav-btn">About ▾</button>
+        <div class="dropdown">
+          <a href="#story">Our Story</a>
+          <a href="#story">Sustainability</a>
+          <a href="#story">FAQ</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="nav-actions">
+      <div class="search-wrap">
+        <input id="search" type="search" placeholder="Search flavors…" autocomplete="off" />
+        <span class="search-icon">🔍</span>
+        <ul id="search-suggestions" class="suggestions" hidden></ul>
+      </div>
+      <button class="icon-btn" aria-label="Wishlist">♡</button>
+      <button class="icon-btn cart-btn" id="cart-btn" aria-label="Cart">
+        🛒 <span class="cart-count" id="cart-count">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <aside class="mobile-menu" id="mobile-menu">
+    <a href="#products">Products</a>
+    <a href="#products">Categories</a>
+    <a href="#story">About</a>
+    <a href="#" id="mobile-cart">Cart</a>
+  </aside>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-text">
+        <span class="eyebrow">✨ New Spring Drop</span>
+        <h1>Sip the <span class="text-gradient">rainbow</span> in every fizz.</h1>
+        <p>Real-fruit sparkling soda. Pastel cans. Big flavor energy. Zero junk.</p>
+        <div class="hero-cta">
+          <button class="btn btn-primary" id="shop-now">Shop the Drop</button>
+          <button class="btn btn-ghost">Watch the fizz →</button>
+        </div>
+        <div class="hero-stats">
+          <div><strong>4.9★</strong><span>12k reviews</span></div>
+          <div><strong>0g</strong><span>added sugar</span></div>
+          <div><strong>100%</strong><span>real fruit</span></div>
+        </div>
+      </div>
+
+      <div class="hero-stage" id="hero-stage">
+        <div class="stage-glow"></div>
+        <div class="bottle-wrap" id="bottle-wrap">
+          <img id="hero-image" src="assets/soda-strawberry.jpg" alt="Soda can" />
+        </div>
+        <div class="dots" id="hero-dots"></div>
+      </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="section" id="products">
+      <header class="section-head">
+        <h2>Featured <span class="text-gradient">Flavors</span></h2>
+        <p>Hand-crafted small batches. Hover for the splash.</p>
+      </header>
+      <div class="product-grid" id="product-grid"></div>
+    </section>
+
+    <!-- Flavor Universe -->
+    <section class="section flavor-universe">
+      <header class="section-head">
+        <h2>Flavor <span class="text-gradient">Universe</span></h2>
+        <p>Click an orb to feel the vibe.</p>
+      </header>
+      <div class="orbit" id="orbit">
+        <div class="orbit-center" id="orbit-center">Strawberry</div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="story">
+      <header class="section-head">
+        <h2>People are <span class="text-gradient">fizzing</span></h2>
+      </header>
+      <div class="testimonials">
+        <article class="testimonial glass">
+          <p>"Tastes like a hug from summer. Obsessed."</p>
+          <footer>— Maya R.</footer>
+        </article>
+        <article class="testimonial glass">
+          <p>"Cute cans, killer flavor. My fridge is rainbow now."</p>
+          <footer>— Theo K.</footer>
+        </article>
+        <article class="testimonial glass">
+          <p>"Finally a soda that doesn't taste like a science experiment."</p>
+          <footer>— Lina P.</footer>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+      <div class="cta-inner glass-strong">
+        <h2>Pour into your <span class="text-gradient">summer</span>.</h2>
+        <p>Build your own 12-pack. Free shipping over $30.</p>
+        <button class="btn btn-primary">Build a Bundle</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-cols">
+      <div>
+        <div class="logo small">
+          <span class="logo-icon"><span class="logo-wave"></span></span>
+          <span class="logo-text">Smoothies <em>Soda</em></span>
+        </div>
+        <p>Real fruit. Real fizz. Made with love in California.</p>
+      </div>
+      <div><h4>Shop</h4><a href="#">All Sodas</a><a href="#">Bundles</a><a href="#">Gifts</a></div>
+      <div><h4>About</h4><a href="#">Our Story</a><a href="#">Sustainability</a><a href="#">Press</a></div>
+      <div><h4>Help</h4><a href="#">Shipping</a><a href="#">Contact</a><a href="#">FAQ</a></div>
+    </div>
+    <div class="footer-bottom">© 2025 Smoothies Soda. All rights reserved.</div>
+  </footer>
+
+  <!-- Cart drawer -->
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-hidden="true">
+    <header>
+      <h3>Your Bag</h3>
+      <button id="close-cart" aria-label="Close">✕</button>
+    </header>
+    <div class="cart-items" id="cart-items"></div>
+    <footer>
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cart-total">$0.00</strong>
+      </div>
+      <button class="btn btn-primary full">Checkout</button>
+    </footer>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
