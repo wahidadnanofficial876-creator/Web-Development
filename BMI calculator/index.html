@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+
+    <link rel="stylesheet" href="BMI.css">
+</head>
+
+<body>
+    <div id="flex-container">
+        <header>
+            <h1 id="hero-heading">BMI CALCULATOR</h1>
+        </header>
+
+        <main>
+            <label for="input-height">Height:</label>
+            <input
+                id="input-height"
+                type="number"
+                placeholder="Enter your height (m)"
+                step="0.01"
+                min="0.1"
+                required
+            >
+
+            <br><br>
+
+            <label for="input-weight">Weight:</label>
+            <input
+                id="input-weight"
+                type="number"
+                placeholder="Enter your weight (kg)"
+                step="0.1"
+                min="1"
+                required
+            >
+
+            <br><br>
+
+            <button id="calculate-button">Calculate</button>
+            <div id="result">
+            
+    <h3>Result</h3>
+
+    <table id="result-table">
+        <thead>
+            <tr>
+                <th>Height (m)</th>
+                <th>Weight (kg)</th>
+                <th>BMI</th>
+                <th>Category</th>
+            </tr>
+        </thead>
+
+        <tbody id="table-body">
+
+        </tbody>
+    </table>
+
+            </div>
+        </main>
+
+    </div>
+
+    <script src="BMI.js"></script>
+</body>
+</html>
